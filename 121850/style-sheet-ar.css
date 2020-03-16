@@ -1,0 +1,247 @@
+ /* the reset code for the browser */
+* {margin: 0; padding: 0; } html, body, div, span, applet, object, iframe, h1, h2, h3, h4, label, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+body {text-align: left;    overflow-y: scroll;overflow-x: hidden;margin: 0 auto;scroll-behavior: smooth}
+.table {display: table;}
+.table-c {display: table-cell;vertical-align: middle;}
+.p-1{padding:1rem} .p-2{padding:2rem} .p-3{padding:3rem} .p-4{padding:4rem} .p-5{padding:5rem} .p-6{padding:6rem} .p-7{padding:7rem} .pt-1{padding-top:1rem} .pt-2{padding-top:2rem} .pt-3{padding-top:3rem} .pt-4{padding-top:4rem} .pt-5{padding-top:5rem} .pt-6{padding-top:6rem} .pt-7{padding-top:7rem} .pl-1{padding-left:1rem} .pl-2{padding-left:2rem} .pl-3{padding-left:3rem} .pl-4{padding-left:4rem} .pl-5{padding-left:5rem} .pl-6{padding-left:6rem} .pl-7{padding-left:7rem} .pr-1{padding-right:1rem} .pr-2{padding-right:2rem} .pr-3{padding-right:3rem} .pr-4{padding-right:4rem} .pr-5{padding-right:5rem} .pr-6{padding-right:6rem} .pr-7{padding-right:7rem} .pb-1{padding-bottom:1rem} .pb-2{padding-bottom:2rem} .pb-3{padding-bottom:3rem} .pb-4{padding-bottom:4rem} .pb-5{padding-bottom:5rem} .pb-6{padding-bottom:6rem} .pb-7{padding-bottom:7rem} .m-1{margin:1rem} .m-2{margin:2rem} .m-3{margin:3rem} .m-4{margin:4rem} .m-5{margin:5rem} .m-6{margin:6rem} .m-7{margin:7rem} .mt-1{margin-top:1rem} .mt-2{margin-top:2rem} .mt-3{margin-top:3rem} .mt-4{margin-top:4rem} .mt-5{margin-top:5rem} .mt-6{margin-top:6rem} .mt-7{margin-top:7rem} .ml-1{margin-left:1rem} .ml-2{margin-left:2rem} .ml-3{margin-left:3rem} .ml-4{margin-left:4rem} .ml-5{margin-left:5rem} .ml-6{margin-left:6rem} .ml-7{margin-left:7rem} .mr-1{margin-right:1rem} .mr-2{margin-right:2rem} .mr-3{margin-right:3rem} .mr-4{margin-right:4rem} .mr-5{margin-right:5rem} .mr-6{margin-right:6rem} .mr-7{margin-right:7rem} .mb-1{margin-bottom:1rem} .mb-2{margin-bottom:2rem} .mb-3{margin-bottom:3rem} .mb-4{margin-bottom:4rem} .mb-5{margin-bottom:5rem} .mb-6{margin-bottom:6rem} .mb-7{margin-bottom:7rem}
+.grid-container {display: grid;grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;grid-template-rows:   auto auto auto auto 4rem auto}
+*{transition: .5s}
+textarea:focus, input:focus{ outline: none;}
+
+/* more secure code */
+.disable{ display: none !important;}
+.bn{}
+.logoimg{}
+.success_message{}
+.error_message{}
+
+/* the social icons */
+.facebook a  {background: url(../icons/social-1/facebook.svg) }
+.twitter a  {background: url(../icons/social-1/twitter.svg) }
+.google a  {background: url(../icons/social-1/google.svg) }
+.instagram a  {background: url(../icons/social-1/instagram.svg) }
+.linkedin a  {background: url(../icons/social-1/linkedin.svg) }
+.youtube a  {background: url(../icons/social-1/youtube.svg) }
+.pinterest a  {background: url(../icons/social-1/pinterest.svg) }
+.icons a {width: 30px;height: 30px;display: block; background-repeat: no-repeat;background-position: center;margin: 5px;opacity: 1;}
+/* .icons a:hover  {margin: 0px;opacity: 1;width: 40px;height: 40px} */
+
+/* the ads classes  */
+/* .ad30x25 , .ad30x10 ,  .ad30×60 { display: none } */
+
+
+/* no major change */
+.logo img {clip-path: circle(50% at 50% 50%);width: 100%}
+.logo h3 {display: none;}
+.icons svg {width: 25px;color: #e71d36;padding: 1px 10px }
+.icons div { display: inline-block;}
+iframe  {width: 100%;height: 100%}
+#map {height: 20rem}
+nav a {color: #000;}
+a {text-decoration: none}
+p{line-height: 1.5}
+form .submit-div input {cursor: pointer;}
+/* the custom code */
+
+
+
+
+body .ahr{
+    grid-column: 2/10;
+    grid-row: 8;
+    margin-bottom: 2vh;
+text-align: left;
+/*! margin-left: 10%; */
+    /*! display: table; */
+    /*! margin-top: 10px; */
+}
+
+body .ahr a {
+    text-decoration: none;
+    z-index: 99999;
+position: relative;
+    white-space: nowrap;
+margin-top: 10px
+}
+
+
+body .ahr a::after {content: 'read more...';
+/*! color:#000; */
+/*! padding: 10px; */text-transform: capitalize;color: #e71d36;transition: .5s;
+/*! background: rgba(0, 0, 0, 0.2); */width: 50px;height: 50px;padding: 10px 20px;margin-right: 20px;font-size: 12px;line-height: 0px;white-space: pre;font-family: f-l;background: #e71d36;color: #fff;border-radius: 1px;}
+body .ahr a:hover::after {background: #ffffff00;color: #000;border-radius: 1px;} 
+
+
+
+
+@font-face {font-family: f-b;src: url(../fonts/lilitaone-b.ttf);}
+@font-face {font-family: f-r;src: url(../fonts/roboto-r.ttf);}
+@font-face {font-family: f-l;src: url(../fonts/roboto-l.ttf);}
+@font-face {font-family: s-r;src: url(../fonts/selima.otf);}
+body {font-family: f-l;max-width: 1100px;margin: 0 auto;background: #eef4ed}
+
+
+/* the grid  */
+header {grid-column: 1/11;grid-row: 1/6;z-index: -1}
+.logo { grid-column: 2/5;grid-row: 1/5;height: 100%;display: table}
+.headline {grid-column: 5/10; grid-row: 2;}
+nav { grid-column: 5/9;grid-row: 3;}
+.icons{grid-column: 1/11;grid-row: 5}
+.breakline-one {grid-column: 1/11;grid-row: 5;z-index: -1}
+
+.p-one {grid-column: 2/10;grid-row: 6}
+.p-two {grid-column: 2/10;grid-row: 7}
+
+
+
+address {grid-column: 2/6;grid-row: 9;}
+aside {grid-column: 2/11;grid-row: 10}
+form {grid-column: 2/9;grid-row: 11}
+
+
+
+
+#map {grid-column: 1/11;grid-row: 12}
+.breakline-two {grid-column: 1/11;grid-row: 13;z-index: -1}
+footer {grid-column: 1/11;grid-row: 13}
+
+
+
+
+.headline , nav {text-align: left}
+.headline  {/* padding: 0 30px; */padding-top: 10vh;height: 100%;display: table;}
+.headline div {display: table-cell;vertical-align: middle; }
+
+
+.logo { height: 100%;display: table;margin-left: -10%;}
+.logo div { display: table-cell;vertical-align: middle;}
+header {background: url(imgs/header.jpg);background-size: cover;background-repeat: no-repeat; height: 100vh }
+nav {margin-top: 5rem ;position: sticky;top :2rem}
+nav a {color: #fff; width: 50px; height: 50px; padding: 10px 20px; margin-right: 20px; font-size: 12px; line-height: 0px; background: rgba(0, 0, 0, 0.2);    white-space: pre;}
+nav a:nth-child(1) {display: none;}
+nav a:hover:nth-child(2) {background: #3ab795;}
+nav a:nth-child(2):after { content: ' Me'}
+nav a:hover:nth-child(3) {background: #3c91e6;}
+nav a:nth-child(3):before { content: 'My '}
+nav a:hover:nth-child(4) {background: #e71d36;}
+nav a:nth-child(4):after { content: ' Me'}
+/* .headline a  {display: block;margin-top: 20px} */
+/* .headline a::before {content: 'Download CV'; background: #f46036;transition: .5s; display: inline-block; padding: 10px 45px; color: #fff; } */
+/* .headline a:hover::before {background: rgba(0, 0, 0, 0.2);} */
+h1 { font-size: calc(50px + 1vh); text-transform: capitalize; color: #e71d36; font-family: s-r; }
+h2 {font-family: f-l; color: #777;}
+h3 {padding: 10px }
+h4 {font-family: f-l; font-size: 40px;color: #e71d36; }
+.breakline-one , .breakline-two  {background: #e71d36}
+article h4 , address h4 , aside h4 , form h4  {padding-top: 5rem;padding-bottom: 2rem}
+.icons h4 ,
+form h4 ,
+aside h4 ,
+address h4 ,
+article h4 {font-size: 0px }
+article h4:before {content: 'About Me' ;    font-family: f-l; font-size: 40px; color: #e71d36;}
+.icons h4:before {content: 'Follow Me' ;    font-family: f-l; font-size: 40px; color: #e71d36;}
+form h4:before {content: 'Contact Me' ;    font-family: f-l; font-size: 40px; color: #e71d36;}
+aside h4:before {content: 'Give me a call' ;    font-family: f-l; font-size: 40px; color: #e71d36;}
+address h4:before {content: 'My address' ;    font-family: f-l; font-size: 40px; color: #e71d36;}
+
+
+
+.icons  {text-align: center; padding-top: 1rem;}
+.icons h4 {color: #fff;display: none;vertical-align: middle;}
+.icons h4:after {content: ' :'}
+.icons div svg {color: #fff}
+.icons div svg:hover {color: #999}
+form label {display: none;}
+form input , form textarea {width: 100%;
+background: #eef4ed;
+border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+color: #e71d36;
+margin-top: 10px;
+padding: 10px 0px;
+border-bottom: 1px solid #e71d36;}
+form textarea {min-height: 200px; }
+form .submit-div {width: 25%;float: right; }
+form .submit-div input{ background: #e71d36;color: #fff;border:none;}
+form .submit-div input:hover {  background: #eef4ed;color: #e71d36}
+form p {    color: #a5d493;
+    font-weight: 900;
+    padding-top: 20px;
+}
+#map{
+    margin-top: 5rem
+}
+
+#map, .breakline-one, .breakline-two , header {width: calc(100vw - 2px); position: relative; margin-left: -50vw; left: 50%; }
+footer {background: #e71d36 ;text-align: center;color: #fff;padding: 10px 0}
+footer a {color: #111;font-weight: 900}
+
+
+
+
+
+/* the arabic code  */
+body {direction: rtl;text-align: right}
+@font-face {font-family: c-r;src: url(../fonts/frutigerltarabic.ttf);}
+p , h1 , h2 , h3 , h4 , label , h6 , a , input , textarea {letter-spacing: 0px !important;font-family: c-r !important}
+
+
+
+.headline, nav {text-align: right; }
+#map, .breakline-one, .breakline-two, header {width: unset;}
+.headline a::before {content: 'ألسيرة الذاتية';}
+.headline {padding: 0 50px;}
+form p {text-align: left;}
+/* the arabic nav  */
+nav a {font-size: 0px;    padding: 20px;}
+nav a:nth-child(2):after { content: 'معلومات عني ';font-size:15px;line-height: 0}
+nav a:nth-child(3):before { content: ' موقعي ';font-size:15px;line-height: 0}
+nav a:nth-child(4):after { content: ' تواصل معي  ';font-size:15px;line-height: 0}
+
+/*THE ARABIC HEADLINE  */
+
+h4::before {font-family: c-r !important }
+article h4::before {font-size: 30px;content: 'معلومات عني'; }
+.icons h4::before {font-size: 30px;content: 'تابعني علي'; }
+address h4::before {font-size: 30px;content: 'عنواني'; }
+aside h4::before {font-size: 30px;content: 'أتصل بي'; }
+form h4::before {font-size: 30px;content: 'تواصـل معي'; }
+
+
+body .ahr a::after {letter-spacing: 0; content: ' تحميل السيرة الذاتية'}
+body .ahr a:hover::after {letter-spacing: 0}
+body .ahr {text-align: right;}
+
+
+@media screen and  (max-width: 960px) {
+    .headline, nav {text-align: center; }
+
+.headline {grid-column: 2/10; grid-row: 1; }
+.logo {grid-column: 2/10; grid-row: 2;}
+nav {grid-column: 3/9; grid-row: 3; }
+.logo img {clip-path: circle(50% at 50% 50%); width: 200px; margin: 0 auto;}
+.logo div {text-align: center; }
+.logo {margin: 10px; }
+.headline {padding-top: 20px; }
+.grid-container {grid-template-rows:   auto }
+nav {margin-top: 20px;}
+ }
+
+@media screen and  (max-width: 650px) {
+address , aside  , form{    grid-column: 2/10;}
+
+
+nav a {margin: 5px;}
+
+article h4, address h4, aside h4, form h4  ,
+article p , address p , aside p 
+{
+    text-align: center;
+}
+nav {grid-column: 1/11; grid-row: 3; }
+
+
+}

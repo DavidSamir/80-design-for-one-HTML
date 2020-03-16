@@ -1,0 +1,345 @@
+ /* the reset code for the browser */
+* {margin: 0; padding: 0; } html, body, div, span, applet, object, iframe, h1, h2, h3, h4, label, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+body {font-family: Domine;text-align: center;    overflow-y: scroll;overflow-x: hidden;background: #fff;margin: 0 auto;scroll-behavior: smooth;}
+.table {display: table;}
+.table-c {display: table-cell;vertical-align: middle;}
+.p-1{padding:1rem} .p-2{padding:2rem} .p-3{padding:3rem} .p-4{padding:4rem} .p-5{padding:5rem} .p-6{padding:6rem} .p-7{padding:7rem} .pt-1{padding-top:1rem} .pt-2{padding-top:2rem} .pt-3{padding-top:3rem} .pt-4{padding-top:4rem} .pt-5{padding-top:5rem} .pt-6{padding-top:6rem} .pt-7{padding-top:7rem} .pl-1{padding-left:1rem} .pl-2{padding-left:2rem} .pl-3{padding-left:3rem} .pl-4{padding-left:4rem} .pl-5{padding-left:5rem} .pl-6{padding-left:6rem} .pl-7{padding-left:7rem} .pr-1{padding-right:1rem} .pr-2{padding-right:2rem} .pr-3{padding-right:3rem} .pr-4{padding-right:4rem} .pr-5{padding-right:5rem} .pr-6{padding-right:6rem} .pr-7{padding-right:7rem} .pb-1{padding-bottom:1rem} .pb-2{padding-bottom:2rem} .pb-3{padding-bottom:3rem} .pb-4{padding-bottom:4rem} .pb-5{padding-bottom:5rem} .pb-6{padding-bottom:6rem} .pb-7{padding-bottom:7rem} .m-1{margin:1rem} .m-2{margin:2rem} .m-3{margin:3rem} .m-4{margin:4rem} .m-5{margin:5rem} .m-6{margin:6rem} .m-7{margin:7rem} .mt-1{margin-top:1rem} .mt-2{margin-top:2rem} .mt-3{margin-top:3rem} .mt-4{margin-top:4rem} .mt-5{margin-top:5rem} .mt-6{margin-top:6rem} .mt-7{margin-top:7rem} .ml-1{margin-left:1rem} .ml-2{margin-left:2rem} .ml-3{margin-left:3rem} .ml-4{margin-left:4rem} .ml-5{margin-left:5rem} .ml-6{margin-left:6rem} .ml-7{margin-left:7rem} .mr-1{margin-right:1rem} .mr-2{margin-right:2rem} .mr-3{margin-right:3rem} .mr-4{margin-right:4rem} .mr-5{margin-right:5rem} .mr-6{margin-right:6rem} .mr-7{margin-right:7rem} .mb-1{margin-bottom:1rem} .mb-2{margin-bottom:2rem} .mb-3{margin-bottom:3rem} .mb-4{margin-bottom:4rem} .mb-5{margin-bottom:5rem} .mb-6{margin-bottom:6rem} .mb-7{margin-bottom:7rem}
+.grid-container {display: grid;grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;grid-template-rows:  40px auto}
+*{transition: .5s}
+textarea:focus, input:focus{ outline: none;}
+
+/* more secure code */
+.disable{ display: none !important;}
+.bn{}
+.logoimg{}
+.success_message{}
+.error_message{}
+
+/* the social icons */
+.facebook a  {background: url(../icons/social-5/facebook.svg) }
+.twitter a  {background: url(../icons/social-5/twitter.svg) }
+.google a  {background: url(../icons/social-5/google.svg) }
+.instagram a  {background: url(../icons/social-5/instagram.svg) }
+.linkedin a  {background: url(../icons/social-5/linkedin.svg) }
+.youtube a  {background: url(../icons/social-5/youtube.svg) }
+.pinterest a  {background: url(../icons/social-5/pinterest.svg) }
+.icons a {width: 30px;height: 30px;display: block; background-repeat: no-repeat;background-position: center;margin: 5px;opacity: .8;}
+.icons a:hover  {margin: 5px;opacity: 1;padding: 1px 10px}
+
+/* the ads classes  */
+.ad30x25 , .ad30x10 ,  .ad30x60 { display: none }
+
+
+
+/* no major change */
+.logo img {width: 20rem;max-width:80% }
+.icons svg {width: 30px;color: #999 ;padding-left: 10px;padding-top: 10px }
+.icons div { display: inline-block;}
+iframe  {width: 100%;height: 100%}
+#map {height: 20rem}
+nav a {color: #fff;text-transform: uppercase;}
+a {text-decoration: none}
+/* the custom code */
+
+
+@font-face {font-family: f-l;src: url(../fonts/kodchasan-l.ttf);}
+@font-face {font-family: f-r;src: url(../fonts/kodchasan-r.ttf);}
+@font-face {font-family: f-b;src: url(../fonts/pacifico-r.ttf);}
+body {font-family: f-r ;max-width: 1900px;margin: 0 auto}
+
+/* the grid  */
+header {grid-column: 1/11;grid-row: 1/4;}
+.logo {grid-column: 2;grid-row: 1;}
+.headline {grid-column: 2/6;grid-row: 2;z-index: 1}
+form {grid-column: 6/10;grid-row: 2;z-index: 1}
+.p-one {grid-column: 2/6;grid-row: 4}
+.p-two {grid-column: 6/10;grid-row: 5}
+.breakline-one {grid-column: 1/11;grid-row: 6;min-height: 30vh}
+.icons {grid-column: 2/6;grid-row: 7}
+aside {grid-column: 6/10;grid-row: 7}
+address{grid-column: 1/11;grid-row: 8}
+#map {grid-column: 1/11;grid-row: 9}
+footer {grid-column: 1/11;grid-row: 10;z-index: 2}
+.breakline-two  {display: none;}
+
+p { line-height: 1.5 }
+
+
+
+header {
+height: 100vh;
+background: url(imgs/header.svg);
+background-repeat: no-repeat;margin-left: -20%;margin-right: -10%
+}
+
+.logo {padding-top: 20px;}
+.logo h3 {
+	color: #fff
+}
+nav {position: fixed;
+top: 0px;
+right: 0px;
+z-index: 99999999;
+background: #1119;
+padding: 10px;
+border-bottom-left-radius: 5px;}
+nav a {
+color: #959595;
+font-size: 15px;
+padding: 10px 5px;
+transition: .5s;font-family: f-l;
+text-transform: uppercase;
+}
+nav a:hover {
+color: #fff;
+cursor: pointer;
+}
+h1 {
+    color: #fff;
+    padding-top: 20vh;
+    font-size: 40px;
+    text-align: center;
+    font-family: f-b;
+}
+h2 {
+color: #fff;
+text-transform: uppercase;
+padding-top: 20px;
+font-family: f-l;
+}
+
+
+body .ahr{
+grid-column: 1/11;
+grid-row: 5;
+}
+
+body section a {
+    text-decoration: none;
+    z-index: 99999;
+position: relative;
+}
+body .ahr a::after {
+content: 'read more';
+padding: 10px 30px;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 2px;
+background: linear-gradient(to right, #e3567d 0%,#e44996 100%);
+color: #fff;
+width: 25%;
+transition: .5s;
+cursor: pointer;
+margin: auto;
+border: 1px solid #FFB5D3;
+border-radius: 5px;
+box-shadow: 0 0 3px #b0b0b033;
+}
+body .ahr a:hover::after {
+    padding: 15px 40px;
+    transition: .4s;
+    letter-spacing: 3px
+}
+
+
+form {
+    width: 65%;
+    margin: 6rem auto 0 auto;
+    background: #fff;
+    box-shadow: 0 0 10px #999;
+    border-radius: 30px;
+    padding: 50px;
+    text-align: left;
+}
+form h4 {
+display: none;}
+form label {
+    color: #E3616A;
+    font-size: 20px;
+    padding-top: 10px;
+}
+form input, form textarea {
+    width: 100%;
+    margin: auto;
+    border: 1px solid #FFB5D3;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #b0b0b033;
+}
+form input {
+    padding: 10px 0;
+    margin: 2px 0;
+}
+form textarea {
+    padding: 5px 0;
+    margin: 5px 0;
+    min-height: 150px;
+}
+form input::placeholder , form textarea::placeholder {
+	color: #fff;opacity: 0}
+.submit-div input {
+    background: #e3567d;
+    background: -moz-linear-gradient(left, #e3567d 0%, #e44996 100%);
+    background: linear-gradient(to right, #e3567d 0%,#e44996 100%);
+    color: #fff;
+    width: 25%;
+    margin: 15px 0 0 75%;transition: .5s;cursor: pointer;}
+.submit-div input:hover {
+    background: #e3567d;
+    background: -moz-linear-gradient(left, #e3567d 40%, #e44996 80%);
+    background: linear-gradient(to right, #e3567d 100%,#e44996 80%);
+    color: #fff;
+    width: 25%;
+    margin: 15px 0 0 75%;}
+form p {
+    font-size: 12px;
+    color: #3bb728;
+    float: left;
+    margin-top: -15px;
+}
+
+
+h4 {
+width: 220px;padding-top: 50px;
+height: 100px;padding-left: 100px;
+position: relative;
+font-family: f-b;
+background: url(imgs/back-head.svg);
+background-repeat: repeat;
+background-repeat: no-repeat;
+font-weight: 900;
+font-size: 40px;
+color: #E34D8E;}
+
+h4 span {    color: #efc7d7;}
+
+article p, address p, aside p {
+    font-size: 20px;
+    color: #D1D1D1;display: inline-block;
+}
+article , address , aside {
+padding: 2rem 0 
+}
+
+.breakline-one {
+	background: url(imgs/pic01.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+width: calc(100vw - 2px);
+position: relative;
+margin-left: -50vw;
+left: 50%;
+margin-bottom: 5rem;margin-top: 5rem;
+}
+
+.icons {
+	text-align: center;
+}
+address h4 {
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.icons svg:hover {width: 33px;color: #e3567d ;padding-left: 7px;padding-top: 7px ;transition: .1s !important}
+
+
+#map {
+	padding-top: 5rem;margin-bottom: -10px;
+
+width: calc(100vw - 2px);
+position: relative;
+margin-left: -50vw;
+left: 50%;
+
+}
+
+footer {
+	padding: 10px 0;color: #fff;background: linear-gradient(to left, #e43ea9 0%,#e4606f 90%);
+}
+footer a {
+    color: black;
+    font-family: f-r;
+    font-weight: 900;}
+@media screen and (max-width: 1280px ) {
+form {grid-column: 6/11;}
+h1 {
+    padding-top: 15vh;
+    font-size: 30px;}
+}
+@media screen and (max-width: 1025px ) {
+form {grid-column: 1/11;grid-row: 3;}
+.headline {grid-column: 1/11;}
+.p-one , .p-two {grid-column: 2/10;}
+.icons {grid-column: 2/10; grid-row: 7; } 
+aside {grid-column: 2/10; grid-row: 8; } 
+address {grid-column: 2/10; grid-row: 9;} 
+address h4 {margin: unset}
+#map {grid-column: 1/11;grid-row: 10}
+footer {grid-column: 1/11;grid-row: 11;z-index: 2}
+
+
+
+}
+
+
+@media screen and (max-width: 650px ){
+                p {font-size: 15px !important;line-height: 2 }
+
+	header {background-position: center; }
+	header:before {
+		content: '';
+		display: block;width: 100%;height: 50vh;background: linear-gradient(to left, #e35b76, #e43da9);position: relative;z-index: -9
+	}
+	.logo {
+    grid-column: 2/10;
+    grid-row: 2;}
+    nav {
+    	right: 0;
+    	width: 100%
+    }
+	h4 {
+    width: 160px;
+    padding-top: 20px;
+    height: 70px;
+    padding-left: 30px;
+    position: relative;
+    font-family: f-b;
+    background: url(imgs/back-head.svg);
+        background-repeat: repeat;
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+    font-weight: 100;
+    font-size: 30px;
+    color: #E34D8E;
+}
+address h4 {
+	    width: 160px;
+}
+article p, address p, aside p {
+    font-size: 15px;width: 80% ;margin: 0 auto
+
+}
+.icons {
+	padding: 2rem 0 
+}
+.icons h4 {
+margin-bottom: 2rem
+}
+.icons svg , .icons svg:hover {
+	width: 25px;padding: 5px
+}
+form label {
+    color: #E3616A;
+    font-size: 15px;}
+}
+
+@media screen and (max-width: 450px ) {
+
+
+		footer h6 {
+			font-size: 10px
+		}
+
+}

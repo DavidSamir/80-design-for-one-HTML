@@ -1,0 +1,153 @@
+ /* the reset code for the browser */
+* {margin: 0; padding: 0; } html, body, div, span, applet, object, iframe, h1, h2, h3, h4, label, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+body {font-family: Domine;text-align: center;    overflow-y: scroll;overflow-x: hidden;background: #F9F9F9;margin: 0 auto;scroll-behavior: smooth;}
+.table {display: table;}
+.table-c {display: table-cell;vertical-align: middle;}
+.p-1{padding:1rem} .p-2{padding:2rem} .p-3{padding:3rem} .p-4{padding:4rem} .p-5{padding:5rem} .p-6{padding:6rem} .p-7{padding:7rem} .pt-1{padding-top:1rem} .pt-2{padding-top:2rem} .pt-3{padding-top:3rem} .pt-4{padding-top:4rem} .pt-5{padding-top:5rem} .pt-6{padding-top:6rem} .pt-7{padding-top:7rem} .pl-1{padding-left:1rem} .pl-2{padding-left:2rem} .pl-3{padding-left:3rem} .pl-4{padding-left:4rem} .pl-5{padding-left:5rem} .pl-6{padding-left:6rem} .pl-7{padding-left:7rem} .pr-1{padding-right:1rem} .pr-2{padding-right:2rem} .pr-3{padding-right:3rem} .pr-4{padding-right:4rem} .pr-5{padding-right:5rem} .pr-6{padding-right:6rem} .pr-7{padding-right:7rem} .pb-1{padding-bottom:1rem} .pb-2{padding-bottom:2rem} .pb-3{padding-bottom:3rem} .pb-4{padding-bottom:4rem} .pb-5{padding-bottom:5rem} .pb-6{padding-bottom:6rem} .pb-7{padding-bottom:7rem} .m-1{margin:1rem} .m-2{margin:2rem} .m-3{margin:3rem} .m-4{margin:4rem} .m-5{margin:5rem} .m-6{margin:6rem} .m-7{margin:7rem} .mt-1{margin-top:1rem} .mt-2{margin-top:2rem} .mt-3{margin-top:3rem} .mt-4{margin-top:4rem} .mt-5{margin-top:5rem} .mt-6{margin-top:6rem} .mt-7{margin-top:7rem} .ml-1{margin-left:1rem} .ml-2{margin-left:2rem} .ml-3{margin-left:3rem} .ml-4{margin-left:4rem} .ml-5{margin-left:5rem} .ml-6{margin-left:6rem} .ml-7{margin-left:7rem} .mr-1{margin-right:1rem} .mr-2{margin-right:2rem} .mr-3{margin-right:3rem} .mr-4{margin-right:4rem} .mr-5{margin-right:5rem} .mr-6{margin-right:6rem} .mr-7{margin-right:7rem} .mb-1{margin-bottom:1rem} .mb-2{margin-bottom:2rem} .mb-3{margin-bottom:3rem} .mb-4{margin-bottom:4rem} .mb-5{margin-bottom:5rem} .mb-6{margin-bottom:6rem} .mb-7{margin-bottom:7rem}
+.grid-container {display: grid;grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;grid-template-rows:  40px auto}
+*{transition: .5s}
+textarea:focus, input:focus{ outline: none;}
+
+/* more secure code */
+.disable{ display: none !important;}
+.bn{}
+.logoimg{}
+.success_message{}
+.error_message{}
+
+/* the social icons */
+.facebook a  {background: url(../icons/social-7/facebook.svg) }
+.twitter a  {background: url(../icons/social-7/twitter.svg) }
+.google a  {background: url(../icons/social-7/google.svg) }
+.instagram a  {background: url(../icons/social-7/instagram.svg) }
+.linkedin a  {background: url(../icons/social-7/linkedin.svg) }
+.youtube a  {background: url(../icons/social-7/youtube.svg) }
+.pinterest a  {background: url(../icons/social-7/pinterest.svg) }
+.icons a {width: 30px;height: 30px;display: block; background-repeat: no-repeat;background-position: center;margin: 5px;opacity: 1;}
+.icons a:hover  {margin: 0px;opacity: 1;width: 40px;height: 40px}
+
+/* the ads classes  */
+.ad30x25 , .ad30x10 ,  .ad30x60 { display: none }
+
+/* no major change */
+.logo img {width: 10rem;max-width: 80%;margin-bottom: -10px; }
+.icons svg {width: 25px;color: #999}
+.icons div { display: inline-block;}
+nav a { text-decoration: none;color: #111 ; padding: 10px }
+iframe  {width: 100%;height: 100%}
+p {line-height: 2}
+#map {height: 20rem}
+/* the custom code */
+/* the grid  */
+
+header {grid-column: 1/11;grid-row: 1/6;}
+.breakline-one  {grid-column: 1/11;grid-row: 1/6;z-index: -3}
+.breakline-two  {grid-column: 1/11;grid-row: 8/10;z-index: -3}
+.breakline-three  {grid-column: 1/11;grid-row: 12;z-index: -3}
+.logo { grid-column: 1/6;grid-row: 1;}
+nav { grid-column: 6/11;grid-row: 1;}
+.headline {grid-column: 1/8;grid-row: 2}
+.icons{grid-column: 6/11;grid-row: 5}
+.p-one {grid-column: 1/11;grid-row: 6}
+.p-two {grid-column: 1/11;grid-row: 7}
+address {grid-column: 6/11;grid-row: 8}
+aside {grid-column: 1/6;grid-row: 8}
+#map {grid-column: 6/11;grid-row: 10}
+form {grid-column: 1/6;grid-row: 10}
+footer {grid-column: 1/11;grid-row: 12}
+ .breakline-one {background: #111; /*background: linear-gradient(90deg, rgba(46,85,92,1) 0%, rgba(46,98,107,1) 100%)*/;position: relative; margin-left: -50vw; left: 50%; }
+.breakline-two {background: #111; /*background: linear-gradient(90deg, rgba(46,85,92,1) 0%, rgba(46,98,107,1) 100%)*/;position: relative; margin-left: -50vw; left: 50%; }
+.breakline-three {background: #111; /*background: linear-gradient(90deg, rgba(46,85,92,1) 0%, rgba(46,98,107,1) 100%)*/;position: relative; margin-left: -50vw; left: 50%; } 
+#map {margin-top: 5rem;height: calc(100% - 5rem)}
+@font-face {font-family: f-r;src: url(../fonts/exo-regular.ttf);}
+@font-face {font-family: f-l;src: url(../fonts/exo-light.ttf);}
+@font-face {font-family: f-b;src: url(../fonts/exo-bold.ttf);}
+body {font-family: f-r ;max-width: 1600px ;margin: 0 auto}
+header {height: 100vh; background: url(imgs/header.jpg); background-position: center; background-repeat: no-repeat;z-index: -2; background-size: cover; clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0 50%);}
+h3 {color: #00A878;}
+h1 , .icons svg , nav a  {color: #f0fee7}
+h1 {font-size: calc(30px + 2vw);padding-top: 10vh}
+h2 { border-top: 2px solid  #00A878 ;padding-top: 10px;color: #fff;display: inline-block;}
+
+
+body .ahr{
+    grid-column: 1/8;
+grid-row: 3;
+margin-top: 3vh;
+text-align: left;
+padding-left: unset;
+    text-align: left;
+    padding: 0 10%;
+}
+
+body section a {
+    text-decoration: none;
+    z-index: 99999;
+position: relative;
+}
+body .ahr a::after {
+content: 'read more.. ';
+color:#f0fee7;
+padding: 30px 0 inherit;
+text-transform: capitalize;
+text-decoration: none;
+letter-spacing: 2px;
+transition: .1s;
+border-bottom: 2px solid #00a878;
+}
+body .ahr a:hover::after {
+    padding-right: 15px;
+    transition: .4s;
+}
+
+.icons div:hover svg , nav a:hover  {color: #00A878}
+nav , .logo {padding-top: 1rem }
+.logo {text-align: left;padding-left: 10px}
+nav {text-align: right;padding-right: 10px}
+nav a:nth-child(3) {display: none;}
+.icons {text-align: right; }
+.icons div {padding-left: 10px }
+.icons h4 {display: none;}.headline{text-align: left;padding: 0 10%;padding-top: 10%}
+address, aside {color: #fff; }
+.p-one , address , aside {padding-top: 5rem;margin-top: 5rem}
+.p-two , address , aside {padding-bottom: 5rem;margin-bottom: 5rem}
+.p-one , .p-two {max-width: 80%;background: #f6f6f6;margin-left: auto;margin-right: auto;padding-left: 5rem;padding-right: 5rem }
+h4 {margin-bottom :15px;border-bottom: 2px solid  #00A878;font-size: 30px;display: inline-block;}
+form label {display: none;}
+form textarea {padding: 10px 1%; height: 200px; }
+form {width: 80% ;margin: 0 auto 2rem auto;margin-top: 5rem;}
+form p  , form h4 {text-align: left;float: left}
+form input {padding: 10px 1%; }
+form input, form textarea {width: 100%;background: transparent; border: none; border-bottom: 1px solid #9899; }
+form .submit-div input {width: 25%; float: right; margin-top: 10px; color: #fff; background: #00A878; cursor: pointer; }
+form .submit-div input:hover {background: #111 }
+footer {color: #fff; background: #111; padding: 10px 0; }
+footer a {text-decoration: none;color: #00A878 }
+
+@media screen and (max-width: 1200px) {
+ address {grid-column: 2/10;grid-row: 8}
+aside {grid-column: 2/10;grid-row: 9}
+form {grid-column: 2/10;grid-row: 10}
+#map {grid-column: 1/11;grid-row: 11}
+.breakline-two  {grid-column: 1/11;grid-row: 8/10;z-index: -3}
+footer {grid-column: 1/11;grid-row: 12}
+.breakline-three  {grid-column: 1/11;grid-row: 12;z-index: -3}
+}
+
+@media screen and (max-width: 750px) {
+nav a {padding: 0;margin: 0} 
+.p-one, .p-two {max-width: 100%; padding-left: 1rem; padding-right: 1rem; }
+body .ahr {
+    grid-column: 1/11;
+    grid-row: 3;
+    margin-top: 3vh;
+    text-align: center;
+    padding-left: unset;}
+    
+    
+.headline {text-align: center; padding-left: 0; padding-top: 10%; grid-column: 2/10; }
+address , aside {padding-bottom: 1rem; margin-bottom: 2rem;    padding-top: 1rem; margin-top: 2rem; }
+form {width: 100%;}
+footer h6 {font-size: 15px }
+.icons {text-align: center; grid-column: 1/11; }
+}

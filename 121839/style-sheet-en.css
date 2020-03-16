@@ -1,0 +1,311 @@
+ /* the reset code for the browser */
+* {margin: 0; padding: 0; } html, body, div, span, applet, object, iframe, h1, h2, h3, h4, label, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+body {text-align: center;    overflow-y: scroll;overflow-x: hidden;margin: 0 auto;scroll-behavior: smooth ;max-width: 1600px;background: #454545}
+.table {display: table;}
+.table-c {display: table-cell;vertical-align: middle;}
+.p-1{padding:1rem} .p-2{padding:2rem} .p-3{padding:3rem} .p-4{padding:4rem} .p-5{padding:5rem} .p-6{padding:6rem} .p-7{padding:7rem} .pt-1{padding-top:1rem} .pt-2{padding-top:2rem} .pt-3{padding-top:3rem} .pt-4{padding-top:4rem} .pt-5{padding-top:5rem} .pt-6{padding-top:6rem} .pt-7{padding-top:7rem} .pl-1{padding-left:1rem} .pl-2{padding-left:2rem} .pl-3{padding-left:3rem} .pl-4{padding-left:4rem} .pl-5{padding-left:5rem} .pl-6{padding-left:6rem} .pl-7{padding-left:7rem} .pr-1{padding-right:1rem} .pr-2{padding-right:2rem} .pr-3{padding-right:3rem} .pr-4{padding-right:4rem} .pr-5{padding-right:5rem} .pr-6{padding-right:6rem} .pr-7{padding-right:7rem} .pb-1{padding-bottom:1rem} .pb-2{padding-bottom:2rem} .pb-3{padding-bottom:3rem} .pb-4{padding-bottom:4rem} .pb-5{padding-bottom:5rem} .pb-6{padding-bottom:6rem} .pb-7{padding-bottom:7rem} .m-1{margin:1rem} .m-2{margin:2rem} .m-3{margin:3rem} .m-4{margin:4rem} .m-5{margin:5rem} .m-6{margin:6rem} .m-7{margin:7rem} .mt-1{margin-top:1rem} .mt-2{margin-top:2rem} .mt-3{margin-top:3rem} .mt-4{margin-top:4rem} .mt-5{margin-top:5rem} .mt-6{margin-top:6rem} .mt-7{margin-top:7rem} .ml-1{margin-left:1rem} .ml-2{margin-left:2rem} .ml-3{margin-left:3rem} .ml-4{margin-left:4rem} .ml-5{margin-left:5rem} .ml-6{margin-left:6rem} .ml-7{margin-left:7rem} .mr-1{margin-right:1rem} .mr-2{margin-right:2rem} .mr-3{margin-right:3rem} .mr-4{margin-right:4rem} .mr-5{margin-right:5rem} .mr-6{margin-right:6rem} .mr-7{margin-right:7rem} .mb-1{margin-bottom:1rem} .mb-2{margin-bottom:2rem} .mb-3{margin-bottom:3rem} .mb-4{margin-bottom:4rem} .mb-5{margin-bottom:5rem} .mb-6{margin-bottom:6rem} .mb-7{margin-bottom:7rem}
+.grid-container {display: grid;grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;grid-template-rows:  40px auto}
+*{transition: .5s}
+textarea:focus, input:focus{ outline: none;}
+
+/* more secure code */
+.disable{ display: none !important;}
+.bn{}
+.logoimg{}
+.success_message{}
+.error_message{}
+
+
+/* the social icons */
+.facebook a  {background: url(../icons/social-1/facebook.svg) }
+.twitter a  {background: url(../icons/social-1/twitter.svg) }
+.google a  {background: url(../icons/social-1/google.svg) }
+.instagram a  {background: url(../icons/social-1/instagram.svg) }
+.linkedin a  {background: url(../icons/social-1/linkedin.svg) }
+.youtube a  {background: url(../icons/social-1/youtube.svg) }
+.pinterest a  {background: url(../icons/social-1/pinterest.svg) }
+.icons a {width: 30px;height: 30px;display: block; background-repeat: no-repeat;background-position: center;margin: 5px;opacity: 1;}
+.icons a:hover  {margin: 0px;opacity: 1;width: 40px;height: 40px}
+
+/* the ads classes  */
+.ad30x25 , .ad30x10 ,  .ad30x60 { display: none }
+
+/* no major change */
+.logo img {width: 20rem;margin-bottom: -10px; }
+.logo h3 {display: none; }
+.icons svg {width: 25px;color: #999}
+.icons div { display: inline-block;}
+iframe  {width: 100%;height: 100%}
+#map {height: 20rem}
+nav a {color: #865;text-transform: uppercase;}
+a {text-decoration: none}
+form .submit-div input {cursor: pointer;}
+/* the custom code */
+
+@font-face {font-family: f-l;src: url(../fonts/oswald-light.ttf);}
+@font-face {font-family: f-r;src: url(../fonts/oswald-regular.ttf);}
+@font-face {font-family: f-c;src: url(../fonts/vastshadow-regular.ttf);}
+@font-face {font-family: f-rr;src: url(../fonts/playfairdisplay-regular.ttf);}
+body {font-family: f-r }
+
+/* the grid  */
+
+header {grid-column: 1/11;grid-row: 1/6;}
+nav {grid-column: 2/10;grid-row: 1}
+.headline {grid-column: 2/10;grid-row: 2/5}
+.logo { grid-column: 2/10;grid-row: 5}
+.p-one {grid-column: 2/6;grid-row: 6}
+.p-two {grid-column: 6/10;grid-row: 6}
+.icons{grid-column: 6/11;grid-row: 8}
+.breakline-one {grid-column: 1/11;grid-row: 9/11;z-index: -99;}
+aside {grid-column: 6/10;grid-row: 9;}
+address {grid-column: 2/6;grid-row: 9}
+#map {grid-column: 2/6;grid-row: 12}
+form {grid-column: 6/10;grid-row: 12}
+footer {grid-column: 1/11;grid-row: 14}
+
+
+
+.breakline-one { 
+    background: #212221;
+    margin: 2rem 0 4rem 0;}
+
+.breakline-two {}
+.breakline-three {} .breakline-two , .breakline-three {display: none;}
+
+.headline {padding: 20vh 0; text-align: center; max-width: 90%;margin: 0 auto;    height: 100%;} 
+.headline div { display: table-cell;vertical-align: middle} 
+.headline a::before {
+    padding: 10px 25px; 
+    content: 'Download ';
+    font-family: f-l ;
+    letter-spacing: 2px;
+    color: #676767;
+    border: 1px solid #676767 }
+
+    .headline a:hover::before { color: #000; background: #676767 }
+p { text-align: left;font-family: f-rr;font-style: italic; color: #9d9e9d; }
+
+nav {
+text-align: center;
+padding: 19px 0;
+z-index: 9;
+height: 15px;}
+
+nav a {	padding: 10px 30px;
+font-family: f-b;
+font-size: 13px;
+letter-spacing: 8px;}
+nav a:hover {color: #9e9b71 }
+header  {min-height: 70vh;background: #212221;background: url(imgs/header.jpg);background-position: center;background-size: cover}
+form h4  , form  label  , aside h4 {display: none}
+.icons {padding: 1rem;
+    margin-top: -5rem;}
+.icons h4 {display: none;}
+h1 {
+    font-size: calc(30px + 2.5vw);
+    color: #865;
+    font-family: f-c;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 4px double #676767;
+    border-bottom: 4px double #676767;
+    line-height: 1;
+}
+h2 {
+padding-top: 10px;
+font-size: calc(20px + 1.5vw);
+font-weight: 900;
+font-family: f-rr;margin: 0 auto;text-transform: uppercase;margin-bottom: 25px;
+display: block;
+color: #9d9e9d;font-style: italic
+}
+
+
+
+body .ahr{
+    grid-column: 1/11;
+grid-row: 4;
+margin-bottom: 10vh;
+/* text-align: left; */
+/* margin-left: 10%; */
+}
+
+body section a {
+    text-decoration: none;
+    z-index: 99999;
+position: relative;
+}
+body .ahr a::after {
+content: 'my resume';
+color:#9d9e9d;
+padding: 10px 30px ;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 2px;
+transition: .1s;
+background: #865;
+font-weight: 770;
+}
+body .ahr a:hover::after {
+    padding: 15px 40px;
+    transition: .4s;
+    letter-spacing: 3px
+}
+
+
+
+
+
+
+
+
+
+.logo img {
+    border: 10px solid #fff ;
+    border-radius: 135px;
+     width: 100%;
+     max-width: 250px;
+     margin-bottom: -125px;
+}
+
+h4::before {
+text-align: left;line-height: 0;float: left;
+margin-top: -50px;
+padding-bottom: 50px;   
+font-size: calc(25px + 2vh);
+color: #9e9b71;
+font-family: f-l;
+margin-left: -1rem;
+}
+.p-one h4 span { display: none; }
+.p-one h4::after {content: "me" }
+.icons svg {
+padding: 10px
+}
+
+.icons h4 ,
+form h4 ,
+aside h4 ,
+address h4 ,
+article h4 {font-size: 0px }
+article h4:before {content: 'About Me' ;}
+.icons h4:before {content: 'Follow Me' ;}
+form h4:before {content: 'Contact Me' ;}
+aside h4:before {content: 'Give me a call' ;}
+address h4:before {content: 'My address' ;}
+
+
+
+.p-one , .p-two  {  padding: 13rem 2rem 7rem 2rem;  }
+address , aside {  padding:  160px 50px 100px 50px;  }
+form {width: 80%;margin: 0 auto;margin-bottom: 6rem}
+form input, form textarea {
+    margin-bottom: 24px;
+    padding: 10px 0px;
+    border: 1px solid #e0dfe6;
+    background: transparent;
+    padding-left: 10px;
+    margin-left: -10px;
+    box-shadow: none;
+    font-size: 1rem;
+    font-style: italic;
+    transition: all 0.1s ease-in-out;
+    line-height: 1.428571429;
+    color: #9d9e9d;font-family: f-l;
+width: 100%}
+
+form input:hover , form textarea:hover  {
+    background: #fff1
+
+}
+
+form .left-input input:nth-child(2) {float: left; width: 45%;display: inline-block; }
+form .left-input input:nth-child(4) {float: right; width: 45%;display: inline-block; }
+ .submit-div input {
+    width: 100px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: f-b;
+    transition: .5s;
+    background: #865;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+.submit-div input:hover {
+    background-color: #9e9b71;
+}
+form p {text-align: center;
+	color: #999
+}
+.icons div:hover svg { color: #9e9b71;}
+textarea {min-height: 200px}
+
+#map {
+width: 100%;height: 100%}
+
+address , aside  { display: table }
+address div , aside div  {display: table-cell; vertical-align: middle }
+
+
+footer {
+text-align: center;
+background: #1b1b1b;
+font-size: 16px;margin-top: 2rem ;
+padding: 10px 0;font-style: italic;
+color: #fff;font-family: f-rr
+}
+footer a {
+color: #9e9b71;padding-left: 5px;
+text-decoration: none;font-style: normal;
+font-family: f-l;
+cursor: pointer
+}
+
+
+@media screen and (max-width: 960px ) {
+nav a {padding: 10px 20px; letter-spacing: 4px; }
+.headline {padding: 15vh 0 }
+
+}
+@media screen and (max-width: 700px ) {
+
+/* the grid  */
+
+header {grid-column: 1/11;grid-row: 1/6;}
+nav {grid-column: 2/10;grid-row: 1}
+.headline {grid-column: 2/10;grid-row: 2/5}
+.logo { grid-column: 2/10;grid-row: 5}
+.p-one {grid-column: 2/10;grid-row: 6}
+.p-two {grid-column: 2/10;grid-row: 7}
+.icons{grid-column: 2/10;grid-row: 8}
+.breakline-one {grid-column: 1/11;grid-row: 9/11;z-index: -99;}
+address {grid-column: 2/10;grid-row: 9}
+aside {grid-column: 2/10;grid-row: 10}
+form {grid-column: 2/10;grid-row: 11}
+#map {grid-column: 2/10;grid-row: 12}
+footer {grid-column: 1/11;grid-row: 13}
+
+.p-one , address {padding-bottom: 0; }
+.p-two , aside  {padding-top: 0; }
+.breakline-one {margin: 0rem 0 4rem 0;}
+
+
+}
+
+@media screen and (max-width: 650px ) {nav a {padding: 10px 10px;} }
+@media screen and (max-width: 550px ) {nav a {padding: 10px 10px;letter-spacing: 1px;} }
+@media screen and (max-width: 450px ) {
+
+
+	footer h6 {
+		font-size: 10px
+	}
+
+}
